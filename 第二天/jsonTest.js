@@ -8,6 +8,7 @@ let user = {
 };
 
 let privat_name = Symbol("privat_name");
+
 // User 类
 class User {
 

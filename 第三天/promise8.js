@@ -21,4 +21,4 @@ let asyncReadFile = function* (){
 	console.log(f1,f2);
 }
 
-asyncReadFile().next().then(data => console.log("./generator1.js out plain success")).catch(err => console.log(err));
+asyncReadFile().then(data => console.log("./generator1.js out plain success")).catch(err => console.log(err));

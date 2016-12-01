@@ -5,6 +5,8 @@ console.log(a + b);
 
 {
 //	b = "aaaa";
-	a = "word";
+	let	a = "word";
 	console.log(a);
 }
+
+console.log(a);
