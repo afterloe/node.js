@@ -1,5 +1,4 @@
 # node.js
-node.js 教学代码 ppt
 
 > Copyright(c) afterloe. ISC Licensed  
 > Version: v0.0.4  
@@ -10,6 +9,24 @@ node.js 教学代码 ppt
     https://github.com/afterloe  
 
 下面介绍 下VIM的命令
+
+查找字符串  
+退出编辑模式
+```bash
+/ string # 向下查询
+? string # 向上查询
+n 下一个关键字
+shift+n 上一个关键字
+```
+折叠/打开折叠
+```bash
+z c # 折叠
+z r # 打开折叠
+z d # 删除折叠内容
+z o # 打开当前折叠
+z R # 打开所有折叠
+```
+
 
 整行补全(自动补全上一行的内容)
 ```bash
@@ -24,7 +41,7 @@ ctrl+x ctrl+f
 当前文件中的关键字
 ```bash
 ctrl+x ctrl+n 
-#
+# 或
 ctrl+x ctrl+p
 ```
 
