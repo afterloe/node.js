@@ -10,6 +10,24 @@
 
 下面介绍 下VIM的命令
 
+分屏
+```bash
+:vsp					左右分屏
+:sp						上下分屏
+vim -O2 file1 file2		左右分屏打开两个文件
+ctrl+o					关闭分屏
+ctrl+w h				左侧焦点
+ctrl+w l				右侧焦点
+ctrl+w k				上侧焦点
+ctrl+w j				下侧焦点
+ctrl+w w				下一个屏
+```
+
+目录形式下，使用v 可以左右分屏查看文件
+```bash
+F3 v
+```
+
 查找字符串  
 退出编辑模式
 ```bash
