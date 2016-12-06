@@ -31,3 +31,55 @@ Node的几个使用场景：
 - 游戏开发领域 pomelo实时框架，应用在游戏和高是实时应用中
 - 工具类应用
 
+NPM:  
+  关键字 author、bin、main、devDependencies,script
+- author 包作者
+- bin 一些包的作者希望包可以作为命令行工具使用，通过npm install -g package_name 就可以将脚本添加到执行路径中，然后使用命令行就能直接执行。node-gyp就是这样使用的
+- main 当包被引入的时候会优先以该字段所标明的脚本为主脚本，如果缺省的话就是index.js、index.node、index.json 为默认入口
+- devDependencies 开发环境依赖使用 npm install --save-dev 进行默认写入
+- script hook命令，当使用npm install 时会优先执行preinstall指向的脚本，而后script中的标明的install脚本才会被依次加载执行。同理，uninstall标明的脚本也会被执行。test的时候指向的就是配置好的测试命令
+
+```json
+{
+	"script": {
+		"preinstall": "",
+		"install": "",
+		"uninstall": "",
+		"test":""
+	}
+}
+```
+
+NPM是可以本地安装的，只要标示出package.json 文件的目录即可  
+```bash
+npm install <tarball file>
+npm install <tarball url>
+npm install <folder>
+```
+
+NPM 修改package源
+```bash
+npm config set registry http://registry.url
+```
+
+NPM 发布包规则
+```bash
+npm install
+npm adduser
+npm publish .
+```
+
+NPM 包管理权限：  
+通常来说一个包只有一个人拥有圈钱进行发布，如果需要多人进行发布，需使用下列命令来查看，添加，删除包的管理者
+```bash
+npm owner ls <package name>
+npm owner add <user> <package_name>
+npm owner rm <user> <package_name>
+```
+
+包分析工具名，使用分析工具可以找出所有包，并生成依赖树
+```bash
+npm list 
+#或
+npm ls
+```

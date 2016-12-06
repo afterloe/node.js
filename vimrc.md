@@ -12,15 +12,15 @@
 
 分屏
 ```bash
-:vsp					左右分屏
-:sp						上下分屏
-vim -O2 file1 file2		左右分屏打开两个文件
-ctrl+o					关闭分屏
-ctrl+w h				左侧焦点
-ctrl+w l				右侧焦点
-ctrl+w k				上侧焦点
-ctrl+w j				下侧焦点
-ctrl+w w				下一个屏
+:vsp					# 左右分屏
+:sp						# 上下分屏
+vim -O2 file1 file2		# 左右分屏打开两个文件
+ctrl+o					# 关闭分屏
+ctrl+w h				# 左侧焦点
+ctrl+w l				# 右侧焦点
+ctrl+w k				# 上侧焦点
+ctrl+w j				# 下侧焦点
+ctrl+w w				# 下一个屏
 ```
 
 目录形式下，使用v 可以左右分屏查看文件
@@ -33,8 +33,8 @@ F3 v
 ```bash
 / string # 向下查询
 ? string # 向上查询
-n 下一个关键字
-shift+n 上一个关键字
+n # 下一个关键字
+shift+n # 上一个关键字
 ```
 折叠/打开折叠
 ```bash
@@ -66,7 +66,7 @@ ctrl+x ctrl+p
 大范围查询和补全
 ```bash
 ctrl+n
-或
+# 或
 ctrl+p
 ```
 

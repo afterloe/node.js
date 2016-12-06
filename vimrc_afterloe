@@ -4,7 +4,8 @@
 syntax on " 自动语法高亮
 set number " 显示行号
 set dictionary+=/home/afterloe/.dict/es6.dict
-set cursorline " 突出显示当前行
+" "set dictionary+=/home/afterloe/.dict/c.dirct
+" set cursorline " 突出显示当前行
 set shiftwidth=4 " 设定 << 和 >> 命令移动时的宽度为 4
 set softtabstop=4 " 使得按退格键时可以一次删掉 4 个空格
 set tabstop=4 " 设定 tab 长度为 4
@@ -27,7 +28,6 @@ autocmd FileType c,cpp map <buffer> <leader><space> :w<cr>:make<cr>
 set foldcolumn=0
 set foldmethod=indent 
 set foldlevel=3 
-set foldenable              " 开始折叠
 set nocompatible
 
 """""新文件标题""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -84,10 +84,12 @@ endfunc
 ""自动补全""
 :inoremap ( ()<ESC>i
 :inoremap ) <c-r>=ClosePair(')')<CR>
-:inoremap { {<CR>}<ESC>O
+:inoremap { {}<ESC>i
 :inoremap } <c-r>=ClosePair('}')<CR>
 :inoremap [ []<ESC>i
 :inoremap ] <c-r>=ClosePair(']')<CR>
+:inoremap < <><ESC>i
+:inoremap > <c-r>=ClosePair('>')<CR>
 :inoremap " ""<ESC>i
 :inoremap ` ``<ESC>i
 :inoremap ' ''<ESC>i
