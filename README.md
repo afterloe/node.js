@@ -14,4 +14,5 @@ day_2 数组使用，文件，restful API
 day_3 promise与 genreator 推导式  
 day_4 babel编码器的使用  
 day_5 react demo  
-day_6 node详细解析
+day_6 node详细解析  
+day_7 node集群
