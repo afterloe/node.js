@@ -45,3 +45,21 @@ $ chmod 755 path_shell
 创建Node子进程来执行javascript文件模块  
 
 ##  进程间的通讯
+在chrome中，执行线程里js和渲染是同步进行的也就是说执行js的时候会停止渲染，渲染的时候会停止js的执行，当执行很大的js的时候会出现页面的卡顿，为了解决这种卡顿，chrome引入WebWorker API来辅助解决，将大运算的js放到其他线程上运行，然后通过线程间的通讯来完成。
+```javascript
+var worker = new Worker('worker.js');
+worker.onmessage = function(event){
+	console.log(event['data']);
+};
+
+
+// worker.js
+// - found a prime
+postMessage(data);
+```
+主线程和工作线程依靠onmessage 和 postMessage 进行通讯。传递是消息而不是共享或者发送资源，所以是一种较为轻量和松耦合的做法。其底层的实现也就是child_process.execFile 或 child_process.fork 的形式，只不过是在调用层加了函数的监听，和绑定了异步回调函数。而在node中，多进程之间的通许是使用IPC(inter-process communication)通道实现的，父子进程之间通过message和send来传递消息。  
+
+ipc 在node中依靠libuv来实现，在windows中，libuv使用的命名管道来实现(name pipe)，在unix中采用 Unix Domain Socket来实现。  
+
+### 原理
+在父进程创建子进程之前，会先创建IPC管道，并监听。然后真正创建子进程，并通过环境变量(NODE_CHANNEL_FD)来通知子进程IPC通道的描述文件，当子进程启动的时候就会去链接这个描述文件并连接上已存在的IPC通道，完成父子进程之间的链接。这是node采用fork的原理，其他开启子进程的方式是无法取读取IPC通道的，除非双方约定好并创建IPC通道，否则是无法进行数据交互的。
