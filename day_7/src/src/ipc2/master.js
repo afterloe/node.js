@@ -1,5 +1,5 @@
 /**!
- * afterloe - lib/ipc_2/master.js
+ * afterloe - lib/ipc2/master.js
  *
  * Copyright(c) afterloe.
  * ISC Licensed

@@ -1,5 +1,5 @@
 /**!
- * afterloe - lib/ipc_2/worker.js
+ * afterloe - lib/ipc2/worker.js
  *
  * Copyright(c) afterloe.
  * ISC Licensed
