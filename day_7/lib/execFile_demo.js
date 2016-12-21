@@ -13,7 +13,7 @@ var _path = require('path');
 
 var _child_process = require('child_process');
 
-var filePath = (0, _path.resolve)(__dirname, '..', '..', 'git.sh');
+var filePath = (0, _path.resolve)(__dirname, '..', 'git.sh');
 var encode = 'UTF8';
 
 /*

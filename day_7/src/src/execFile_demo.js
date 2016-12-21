@@ -12,7 +12,7 @@
 import {resolve} from 'path';
 import {execFile} from 'child_process';
 
-const filePath = resolve(__dirname, '..', '..', 'git.sh');
+const filePath = resolve(__dirname, '..', 'git.sh');
 const encode = 'UTF8';
 
 /*
