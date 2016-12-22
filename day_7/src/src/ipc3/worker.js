@@ -12,7 +12,7 @@
 import http from 'http';
 
 const server = http.createServer((req, res) => {
-	if(Math.random() >= 0.5) throw new Error('err');
+//	if(Math.random() >= 0.5) throw new Error('err');
 	res.writeHead(200, {'Content-Type': 'application/json'});
 	res.end(`{"name":"afterloe", "mail":"lm6289511@gmail.com", "friends":["joe", "yang"], "handler": "handler by ${process['pid']}"}`);
 });

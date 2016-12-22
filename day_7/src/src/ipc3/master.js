@@ -9,10 +9,14 @@
  */
 "use strict";
 
+import cluster from 'cluster';
 import {resolve} from 'path';
 import {fork} from 'child_process';
 import {cpus} from 'os';
 import {createServer} from 'net';
+
+cluster['schedulingPolicy'] = cluster['SCHED_RR']; // 启用轮叫调度策略
+// cluster['schedulingPolicy'] = cluster['SCHED_NONE']; // 启用抢占式调度策略
 
 const [nums, workerPath, server, threadManager] = [cpus().length, resolve(__dirname, 'worker'), createServer(), new Map()];
 const [__port, __host] = [10030, '127.0.0.1'];
@@ -25,7 +29,7 @@ const tooFrequently = () => {
 		restartLog.shift();
 	}
 
-	return restartLog[restartLog.length - 1] - restartLog[0] < during;
+	return length > maxLimit && restartLog[restartLog.length - 1] - restartLog[0] < during;
 }
 
 const createThread = () => {
@@ -70,6 +74,7 @@ process.on('exit', () => {
 });
 
 process.on('giveup', () => {
+	// 自定义的严重事件，需要日志调节
 	console.log('too frequently, master server will shutdown!');
 	process.exit(1);
 });
