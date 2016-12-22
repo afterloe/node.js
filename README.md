@@ -17,7 +17,8 @@ day_3 promise与 genreator 推导式
 day_4 babel编码器的使用  
 day_5 react demo  
 day_6 node详细解析  
-day_7 node集群  
+day_7 node集群 
+day_8 产品化&规范化  
 
 ## Warning
 直接运行对应天数中的代码可能会存在路径之类的问题，当对应天数的文件夹下存在lib的时候，请运行lib下的js。
