@@ -1,0 +1,22 @@
+{
+  "ecmaVersion": 6,
+  "libs": [],
+  "plugins": {
+    "complete_strings": {
+      "maxLength": 15
+    },
+    "node": {
+      "dontLoad": "",
+      "load": "",
+      "modules": ""
+    },
+    "es_modules": {},
+    "angular": {},
+    "requirejs": {
+      "baseURL": "",
+      "paths": "",
+      "override": ""
+    },
+    "commonjs": {}
+  }
+}
