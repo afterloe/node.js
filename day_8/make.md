@@ -129,8 +129,15 @@ VARIABLE += value
 # 将值追加到变量的尾部
 ```
 
-内置变量主要为了兼容跨平台，详细的内置变量请[戳我](https://www.gnu.org/software/make/manual/html_node/Implicit-Variables.html)  
-在makefile中还有一种名为自动变量，详细请[戳我](https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html)  
+内置变量主要为了兼容跨平台，make添加了内置变量，该内置变量用于处理删除等不同平台的差异，详细的内置变量请[戳我](https://www.gnu.org/software/make/manual/html_node/Implicit-Variables.html)  
+在makefile中还有一种名为自动变量，自动变量用于减少书写内容，部分自动变量介绍如下，详细请[戳我](https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html)  
+* $@ 代表当前规则的规则名
+* $< 代表当前规则下的第一个前置条件
+* $? 代表比目标更加新的所有前置条件
+* $^ 代表所有前置条件
+* $* 代表匹配符%匹配的部分，比如%匹配的是f1.txt 那么$*就是 f1
+* $(@D) $(@F) 分别代表当前规则指向的目录名和文件名例如 $@ 为 src/input.js $(@D) src $(@F) input.js
+* $(<D) $(<F) 同上，不过指向的是第一个前置条件的目录和文件名
 
 ### makefile支持判断和循环，语法和bash一致
 
