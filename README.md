@@ -1,17 +1,14 @@
-node.js 教学代码&&ppt
-===
+# node.js 教学代码&&ppt
 
 > Copyright(c) afterloe. MIT Licensed  
-> Version: v0.0.4  
-> ModifyTime: 2016-12-1 11:07:43  
+> Version: v0.0.5  
+> ModifyTime: 2017-6-16 14:22:43  
 > Authors:
     afterloe <lm6289511@gmail.com> (https://weibo.com/afterloe)  
-> Host:
-    https://weibo.com/afterloe  
 
 ## Overview 
 
-文档入门处，将在每章都写下创建内容，同时可以在连接处查看代码
+文档入门处，将在每章都写下创建内容，同时可以在连接处查看代码。本文档采用`gitbook`构建，主要介绍一下node相关的操作和vim相关的操作。如果想转载请著名出处
 
 day_1 javascript基础，node基本使用  
 day_2 数组使用，文件，restful API  

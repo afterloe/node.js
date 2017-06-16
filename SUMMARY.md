@@ -1,7 +1,7 @@
 # Summary
 
 * [简介](README.md)
-* [node基础介绍](doc/index.md)
+* [node](doc/index.md)
     * [Javascript 基础](doc/js/day1.md)
     * [node 基本使用](doc/js/day1_1.md)
     * [数组的使用](doc/js/day2_1.md)
@@ -16,6 +16,6 @@
 * [编辑器特辑](doc/editor/index.md)
     * [vim 相关使用](doc/editor/vim.md)
     * [Atom 相关使用](doc/editor/atom.md)
-* [反馈](doc/feedback/index.md)
-* [版权信息](LICENSE.md)
+* [反馈](doc/feedback.md)
+* [版权信息](doc/LICENSE.md)
 
