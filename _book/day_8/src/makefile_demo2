@@ -1,9 +1,0 @@
-all: build-js build-css
-
-build-js: 
-  browserify -t brfs src/app.js > site/app.js
-
-build-css:
-  stylus src/style.styl > site/style.css
-
-.PHONY build-js build-css

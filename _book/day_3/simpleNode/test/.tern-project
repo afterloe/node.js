@@ -1,7 +1,0 @@
-{
-	"libs" : ["browser","ecma6","angular","underscore","jquery"],
-	"plugins" : {
-		"node" : {},
-		"angular" : {}
-	}
-}
