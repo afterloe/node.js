@@ -1,15 +1,17 @@
 node.js 教学代码&&ppt
 ===
 
-> Copyright(c) afterloe. ISC Licensed  
+> Copyright(c) afterloe. MIT Licensed  
 > Version: v0.0.4  
 > ModifyTime: 2016-12-1 11:07:43  
 > Authors:
-    afterloe <lm6289511@gmail.com> (https://github.com/afterloe)  
+    afterloe <lm6289511@gmail.com> (https://weibo.com/afterloe)  
 > Host:
-    https://github.com/afterloe  
+    https://weibo.com/afterloe  
 
 ## Overview 
+
+文档入门处，将在每章都写下创建内容，同时可以在连接处查看代码
 
 day_1 javascript基础，node基本使用  
 day_2 数组使用，文件，restful API  
@@ -31,8 +33,5 @@ $ node master.js
 ```bash
 $ cd day_7/src
 $ npm run build
-.
-..
-...
 ```
 编译完成后返回到lib目录，就可以按照上述方法运行脚本
