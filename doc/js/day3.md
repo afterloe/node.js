@@ -1,0 +1,2 @@
+# promise于Generator
+
