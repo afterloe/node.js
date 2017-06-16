@@ -5,7 +5,7 @@
     * [Node  基础](doc/js/day1.md)
     * [数组的使用](doc/js/day2_1.md)
     * [文件操作](doc/js/day2_2.md)
-    * [基本RESTApi](doc/js/day2_3.md)
+    * [基本REST Api](doc/js/day2_3.md)
     * [promise于Generator](doc/js/day3.md)
     * [babel编码器](doc/js/day4.md)
     * [React 的使用](doc/js/day5.md)
