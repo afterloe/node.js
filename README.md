@@ -1,6 +1,6 @@
 # node.js 教学代码&&ppt
 
-> Copyright(c) afterloe. MIT Licensed  
+> Copyright(c) afterloe. Apache 2.0 Licensed  
 > Version: v0.0.5  
 > ModifyTime: 2017-6-16 14:22:43  
 > Authors:
