@@ -8,6 +8,9 @@
 > Host:
     https://github.com/afterloe  
 
+推荐使用`vimplus`进行配置     
+
+### VIM 使用
 下面介绍 下VIM的命令
 
 分屏
